@@ -37,7 +37,7 @@ app.get("/", (req, res) => {
   res.send("Hello World!");
 });
 
-app.use("/captcha", cpachaRoutes);
+app.use("/api/captcha", cpachaRoutes);
 // app.use("/razorpay", razorpayRoutes);
 
 // 404 Middleware for Undefined Routes
