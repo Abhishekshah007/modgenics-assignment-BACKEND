@@ -15,14 +15,7 @@ const razorpayRoutes = require("./routes/razorpayRoutes");
 const port = process.env.PORT || 5000;
 
 // section 2: adding middlewares especifically cors
-app.use(bodyParser.json());
-const corsOptions = {
-  origin: '*', 
-  methods: ['GET', 'POST'], 
-  allowedHeaders: ['Content-Type'], 
-};
-
-app.use(cors(corsOptions));
+app.use(cors())
 
 // section 3: making sure first database connect 
 database()
