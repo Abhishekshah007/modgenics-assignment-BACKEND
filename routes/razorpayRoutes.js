@@ -1,9 +1,10 @@
-// const express = require("express");
-// const router = express.Router();
-// const { createOrder, verifyPayment } = require("../controllers/razorpayController");
+const express = require("express");
+const router = express.Router();
+const handlePayout = require("../controllers/razorpayController")
 
-// router.post("/createOrder", createOrder);
 
-// router.post("/verifyPayment", verifyPayment);
+router.post("/payout", handlePayout)
 
-// module.exports = router
+
+
+module.exports = router
