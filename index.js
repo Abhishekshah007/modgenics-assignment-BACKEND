@@ -16,7 +16,11 @@ const port = process.env.PORT || 5000;
 
 // section 2: adding middlewares especifically cors
 app.use(bodyParser.json());
-app.use(cors()); 
+app.use(cors({
+  origin: ['https://cash-captcha.vercel.app/','http://localhost:3000'],
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  allowedHeaders: ['Content-Type']
+}));
 
 
 // section 3: making sure first database connect 
